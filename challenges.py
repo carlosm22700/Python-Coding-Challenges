@@ -14,9 +14,9 @@ sayHello() # => Hello!
 -----------------------------------------------------------------*/
 '''
 # Your solution for 00-sayHello (example) here:
-
 def sayHello():
     return 'Hello!'
+
 
 '''
 -----------------------------------------------------------------
@@ -44,6 +44,7 @@ fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 6, 7, 8, 'fizz', 'buzz', 11, 'fizz', 13
 '''
 # Your solution for 01-fizzbuzz here:
 
+
 '''
 -----------------------------------------------------------------
 Challenge: 02-length_of_last_word
@@ -63,23 +64,25 @@ length_of_last_word(' Face    difficult situations    and conflict head     on  
 '''
 # Your solution for 02-length_of_last_word here:
 
+
 '''
 -----------------------------------------------------------------
-Challenge: 03-search_insert
+Challenge: 03-sum_of_maximums
 
 Difficulty: Basic
 
 Prompt:
-Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+Given a 2D array, get the max number of each list and return the sum of maximum numbers.
 
 Examples:
-search_insert([1, 3, 5, 7], 5) # 2
-search_insert([1, 3, 5, 6, 9], 2) # 1
-search_insert([1, 3, 6], 7) # 3
+sum_of_maximums([[3,2,3], [5,2,8], [4,6,2]])) # 17
+sum_of_maximums([[8,2,6], [2,9,17,8], [3,6,4], [-1,-23]])) # 30
+sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]])) # 17
 
 -----------------------------------------------------------------
 '''
-# Your solution for 03-search_insert here:
+# Your solution for 03-sum_of_maximums:
+
 
 '''
 -----------------------------------------------------------------
@@ -100,20 +103,73 @@ majority_element([2,2,1,1,1,2,2]) # 2
 '''
 # Your solution for 04-majority_element:
 
+
 '''
 -----------------------------------------------------------------
-Challenge: 05-sum_of_maximums
+Challenge: 05-search_insert
 
 Difficulty: Basic
 
 Prompt:
-Given a 2D array, get the max number of each list and return the sum of maximum numbers.
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
 Examples:
-sum_of_maximums([[3,2,3], [5,2,8], [4,6,2]])) # 17
-sum_of_maximums([[8,2,6], [2,9,17,8], [3,6,4], [-1,-23]])) # 30
-sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]])) # 17
+search_insert([1, 3, 5, 7], 5) # 2
+search_insert([1, 3, 5, 6, 9], 2) # 1
+search_insert([1, 3, 6], 7) # 3
 
 -----------------------------------------------------------------
 '''
-# Your solution for 05-sum_of_maximums:
+# Your solution for 05-search_insert here:
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 06-max_profit
+
+Difficulty: Intermediate
+
+Prompt:
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+Examples:
+max_profit([7,1,5,3,6,4]) # 2
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+
+max_profit([7,6,4,3,1]) # 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+
+max_profit([1, 3, 6], 7) # 3
+
+-----------------------------------------------------------------
+'''
+# Your solution for 06-max_profit here:
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 07-is_palindrome
+
+Difficulty: Intermediate
+
+Prompt:
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Examples:
+is_palindrome('A man, a plan, a canal: Panama') # True
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+is_palindrome('race a car') # False
+is_palindrome(' ') # True
+
+
+-----------------------------------------------------------------
+'''
+# Your solution for 07-is_palindrome here:
