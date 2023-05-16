@@ -65,11 +65,24 @@ class TestMajorityElement(unittest.TestCase):
         assert c.majority_element([3, 2, 3]) == 3
     
     def test_majority_element2(self):
-        assert c.majority_element([2, 2, 1, 1, 1, 2, 2]) == 2
+        assert c.majority_element([2, 2, 1, 1, 1, 2, 2, 3]) == 2
 
     def test_majority_element3(self):
-        assert c.majority_element([1, 3, 3, 5, 1, 2, 6, 2, 1]) == 1
+        assert c.majority_element([3, 3, 5, 1, 2, 6, 2, 1, 1]) == 1
 
 
+
+
+class TestSumOfMax(unittest.TestCase):
+
+    def test_sum_of_maximums1(self):
+        assert c.sum_of_maximums([[3,2,3], [5,2,8], [4,6,2]]) == 17
+    
+    def test_sum_of_maximums2(self):
+        assert c.sum_of_maximums([[8,2,6], [2,9,17,8], [3,6,4], [-1, -23]]) == 30
+
+    def test_sum_of_maximums3(self):
+        assert c.sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]]) == 17
+        
 ''' move this line below test you're working on
 '''

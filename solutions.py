@@ -158,12 +158,38 @@ majority_element([2,2,1,1,1,2,2]) # 2
 # Your solution for 04-majority_element:
 def majority_element(nums):
     count = 0
-    result = nums[0]
+    result = None
 
     for i in nums:
+        if count == 0:
+            result = i
         if i == result:
             count += 1
         else:
             count -= 1
 
     return result
+
+'''
+-----------------------------------------------------------------
+Challenge: 05-sum_of_maximums
+
+Difficulty: Basic
+
+Prompt:
+Given a 2D array, get the max number of each list and return the sum of maximum numbers.
+
+Examples:
+sum_of_maximums([[3,2,3], [5,2,8], [4,6,2]])) # 14
+sum_of_maximums([[8,2,6], [2,9,17,8], [3,6,4], [-1,-23]])) # 31
+sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]])) # 17
+
+-----------------------------------------------------------------
+'''
+# Your solution for 05-sum_of_maximums:
+def sum_of_maximums(nums):
+    sum = 0
+    for num in nums:
+        sum += max(num)
+    
+    return sum

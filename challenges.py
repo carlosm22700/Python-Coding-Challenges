@@ -99,3 +99,21 @@ majority_element([2,2,1,1,1,2,2]) # 2
 -----------------------------------------------------------------
 '''
 # Your solution for 04-majority_element:
+
+'''
+-----------------------------------------------------------------
+Challenge: 05-sum_of_maximums
+
+Difficulty: Basic
+
+Prompt:
+Given a 2D array, get the max number of each list and return the sum of maximum numbers.
+
+Examples:
+sum_of_maximums([[3,2,3], [5,2,8], [4,6,2]])) # 17
+sum_of_maximums([[8,2,6], [2,9,17,8], [3,6,4], [-1,-23]])) # 30
+sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]])) # 17
+
+-----------------------------------------------------------------
+'''
+# Your solution for 05-sum_of_maximums:
