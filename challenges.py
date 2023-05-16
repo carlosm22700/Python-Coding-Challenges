@@ -58,7 +58,7 @@ A word is a maximal substring consisting of non-space characters only.
 Examples:
 length_of_last_word('hello world') # 5
 length_of_last_word("I'm sorry Dave, I'm afraid I can't do that") # 4
-length_of_last_word(' Face    difficult situations    and conflict head     on     ' # 2
+length_of_last_word(' Face    difficult situations    and conflict head     on     ') # 2
 -----------------------------------------------------------------
 '''
 # Your solution for 02-length_of_last_word here:
@@ -73,10 +73,29 @@ Prompt:
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
 Examples:
-search_insert([1, 3, 5, 7], 5)) # 2
-search_insert([1, 3, 5, 6, 9], 2)) # 1
-search_insert([1, 3, 6], 7)) # 3
+search_insert([1, 3, 5, 7], 5) # 2
+search_insert([1, 3, 5, 6, 9], 2) # 1
+search_insert([1, 3, 6], 7) # 3
 
 -----------------------------------------------------------------
 '''
 # Your solution for 03-search_insert here:
+
+'''
+-----------------------------------------------------------------
+Challenge: 04-majority_element
+
+Difficulty: Basic
+
+Prompt:
+Given an list nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the list.
+
+Examples:
+majority_element([3,2,3])) # 3
+majority_element([2,2,1,1,1,2,2]) # 2
+
+-----------------------------------------------------------------
+'''
+# Your solution for 04-majority_element:

@@ -137,3 +137,33 @@ def search_insert(nums, target):
             return search_insert(nums[half:], target)
         else:
             return search_insert(nums[:half], target)
+
+'''
+-----------------------------------------------------------------
+Challenge: 04-majority_element
+
+Difficulty: Basic
+
+Prompt:
+Given an list nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the list.
+
+Examples:
+majority_element([3,2,3])) # 3
+majority_element([2,2,1,1,1,2,2]) # 2
+
+-----------------------------------------------------------------
+'''
+# Your solution for 04-majority_element:
+def majority_element(nums):
+    count = 0
+    result = nums[0]
+
+    for i in nums:
+        if i == result:
+            count += 1
+        else:
+            count -= 1
+
+    return result
