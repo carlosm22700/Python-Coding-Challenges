@@ -354,7 +354,7 @@ Challenge: 09-prime_factors
 Difficulty: Intermediate
 
 Prompt:
-Write a function named prime_factors that accepts a whole number greater than one (1) as an argument and returns an list of that argument's prime factors.
+Write a function named prime_factors that accepts a whole number greater than one (1) as an argument and returns a sorted list of that argument's prime factors.
 
 The prime factors of a whole number are the prime numbers that, when multiplied together, equals the whole number.
 
@@ -387,7 +387,7 @@ def prime_factors(num, primes=None):
 
     if is_prime(num):
         primes.append(num)
-        return sorted(primes)
+        return primes
     
     for i in range(2, num):
         is_divisible = num % i == 0
@@ -417,6 +417,8 @@ def create_phone_number(nums):
     
     stringify_nums = ''
     for num in nums:
+        if num > 9:
+            return 'Not a valid phone number'
         stringify_nums += str(num)
 
     # regex

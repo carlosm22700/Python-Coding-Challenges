@@ -1,9 +1,11 @@
 import pytest
 import unittest
-import challenges as c
+import solutions as c
 
 # to run tests, execute `pytest` in the terminal
 
+''' move this line below the challenge you're working currently on (option + down)
+# Challenge: 01-fizz_buzz
 class TestFizzBuzz(unittest.TestCase):
 
     def test_fizzbuzz1(self):
@@ -22,6 +24,7 @@ class TestFizzBuzz(unittest.TestCase):
                 assert c.fizzbuzz(i) == 'FizzBuzz'
 
 
+# Challenge: 02-length_of_last_word
 class TestLengthOfLastWord(unittest.TestCase):
 
     def test_lolw1(self):
@@ -34,6 +37,7 @@ class TestLengthOfLastWord(unittest.TestCase):
         assert c.length_of_last_word('destiny  lies   above     us  ') == 2
 
 
+# Challenge: 03-sum_of_maximums
 class TestSumOfMax(unittest.TestCase):
 
     def test_sum_of_maximums1(self):
@@ -46,6 +50,7 @@ class TestSumOfMax(unittest.TestCase):
         assert c.sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]]) == 17
 
 
+# Challenge: 04-majority_element
 class TestMajorityElement(unittest.TestCase):
 
     def test_majority_element1(self):
@@ -58,6 +63,7 @@ class TestMajorityElement(unittest.TestCase):
         assert c.majority_element([3, 3, 5, 1, 2, 6, 2, 1, 1]) == 1
 
 
+# Challenge: 05-search_insert
 class TestSearchInsert(unittest.TestCase):
 
     def test_search_insert1(self):
@@ -70,6 +76,7 @@ class TestSearchInsert(unittest.TestCase):
         assert c.search_insert([1, 3, 6], 7) == 3
 
 
+# Challenge: 06-max_profit
 class TestMaxProfit(unittest.TestCase):
 
     def test_max_profit1(self):
@@ -82,6 +89,7 @@ class TestMaxProfit(unittest.TestCase):
         assert c.max_profit([8,2,6,1,7]) == 6
 
 
+# Challenge: 07-is_palindrome
 class TestIsPalindrome(unittest.TestCase):
 
     def test_is_palindrome1(self):
@@ -94,6 +102,7 @@ class TestIsPalindrome(unittest.TestCase):
         assert c.is_palindrome(' ') == True
 
 
+# Challenge: 08-title_to_number
 class TestTitleToNumber(unittest.TestCase):
 
     def test_title_to_number1(self):
@@ -106,6 +115,43 @@ class TestTitleToNumber(unittest.TestCase):
         assert c.title_to_number('ZY') == 701
 
 
-''' move this line below test you're working on
+# Challenge: 09-prime_factors
+class TestPrimeFactors(unittest.TestCase):
+
+    def test_prime_factors1(self):
+        assert c.prime_factors(3) == [3]
+    
+    def test_prime_factors2(self):
+        assert c.prime_factors(18) == [2, 3, 3]
+
+    def test_prime_factors3(self):
+        assert c.prime_factors(200) == [2, 2, 2, 5, 5]
+
+
+# Challenge: 10a-create_phone_number
+class TestCreatePhoneNumber(unittest.TestCase):
+
+    def test_create_phone_number1(self):
+        assert c.create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) == '(123) 456-7890'
+    
+    def test_create_phone_number2(self):
+        assert c.create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 'Not a valid phone number'
+
+    def test_create_phone_number3(self):
+        assert c.create_phone_number([2, 5, 3, 1, 2, 3, 0, 0, 0, 0]) == '(253) 123-0000'
+
+
+# Challenge: 10b-rgb
+class TestRGB(unittest.TestCase):
+
+    def test_rgb1(self):
+        assert c.rgb(255, 255, 255) == 'FFFFFF'
+    
+    def test_rgb2(self):
+        assert c.rgb(0, 0, 0) == '000000'
+
+    def test_rgb3(self):
+        assert c.rgb(148, 0, 211) == '9400D3'
+        
 '''
 
