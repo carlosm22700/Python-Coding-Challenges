@@ -43,19 +43,7 @@ fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 6, 7, 8, 'fizz', 'buzz', 11, 'fizz', 13
 -----------------------------------------------------------------
 '''
 # Your solution for 01-fizzbuzz here:
-def fizzbuzz(max_num):
-    fb_list = []
-    for i in range(1, max_num + 1):
-        if i % 15 == 0:
-            fb_list.append('FizzBuzz')
-        elif i % 3 == 0:
-            fb_list.append('Fizz')
-        elif i % 5 == 0:
-            fb_list.append('Buzz')
-        else:
-            fb_list.append(i)
-    
-    return fb_list
+
 
 '''
 -----------------------------------------------------------------
