@@ -1,4 +1,3 @@
-import pytest
 import unittest
 import challenges as c
 
