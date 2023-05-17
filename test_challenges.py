@@ -1,27 +1,27 @@
 import pytest
 import unittest
-import solutions as c
+import challenges as c
 
 # to run tests, execute `pytest` in the terminal
+''' move this line below the challenge's test that you're working currently on (option + down)
 
-''' move this line below the challenge you're working currently on (option + down)
 # Challenge: 01-fizz_buzz
 class TestFizzBuzz(unittest.TestCase):
 
     def test_fizzbuzz1(self):
         for i in c.fizzbuzz(20):
             if i in [3, 6, 9, 18]:
-                assert i == 'Fizz'
+                assert i == 'fizz'
     
     def test_fizzbuzz2(self):
         for i in c.fizzbuzz(30):
             if i in [5, 10, 20, 25]:
-                assert c.fizzbuzz(i) == 'Buzz'
+                assert c.fizzbuzz(i) == 'buzz'
 
     def test_fizzbuzz3(self):
         for i in c.fizzbuzz(60):
             if i in [15, 30, 45, 60]:
-                assert c.fizzbuzz(i) == 'FizzBuzz'
+                assert c.fizzbuzz(i) == 'fizzbuzz'
 
 
 # Challenge: 02-length_of_last_word
