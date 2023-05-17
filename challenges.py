@@ -173,3 +173,37 @@ is_palindrome(' ') # True
 -----------------------------------------------------------------
 '''
 # Your solution for 07-is_palindrome here:
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 08-title_to_number
+
+Difficulty: Intermediate
+
+Prompt:
+Excel Sheet Column Number
+Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.
+
+For example:
+
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28 
+...
+
+Examples:
+title_to_number('A') # 1
+
+title_to_number('AB') # 28
+title_to_number('ZY') # 701
+
+
+-----------------------------------------------------------------
+'''
+# Your solution for 08-title_to_number here:
+

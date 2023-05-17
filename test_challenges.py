@@ -92,6 +92,20 @@ class TestIsPalindrome(unittest.TestCase):
 
     def test_is_palindrome3(self):
         assert c.is_palindrome(' ') == True
+
+
+class TestTitleToNumber(unittest.TestCase):
+
+    def test_title_to_number1(self):
+        assert c.title_to_number('A') == 1
+    
+    def test_title_to_number2(self):
+        assert c.title_to_number('AB') == 28
+
+    def test_title_to_number3(self):
+        assert c.title_to_number('ZY') == 701
+
+
 ''' move this line below test you're working on
 '''
 
