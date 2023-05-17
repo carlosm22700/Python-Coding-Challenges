@@ -43,7 +43,19 @@ fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 6, 7, 8, 'fizz', 'buzz', 11, 'fizz', 13
 -----------------------------------------------------------------
 '''
 # Your solution for 01-fizzbuzz here:
-
+def fizzbuzz(max_num):
+    fb_list = []
+    for i in range(1, max_num + 1):
+        if i % 15 == 0:
+            fb_list.append('FizzBuzz')
+        elif i % 3 == 0:
+            fb_list.append('Fizz')
+        elif i % 5 == 0:
+            fb_list.append('Buzz')
+        else:
+            fb_list.append(i)
+    
+    return fb_list
 
 '''
 -----------------------------------------------------------------
@@ -207,3 +219,67 @@ title_to_number('ZY') # 701
 '''
 # Your solution for 08-title_to_number here:
 
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 09-prime_factors
+
+Difficulty: Intermediate
+
+Prompt:
+Write a function named prime_factors that accepts a whole number greater than one (1) as an argument and returns an list of that argument's prime factors.
+
+The prime factors of a whole number are the prime numbers that, when multiplied together, equals the whole number.
+
+If the argument provided is not greater than 1, or not a whole number, then primeFactors should return an empty list.
+
+Examples:
+prime_factors(2) //=> [2]
+prime_factors(3) # [3]
+prime_factors(4) # [2, 2]
+prime_factors(18) # [2, 3, 3]
+prime_factors(29) # [29]
+prime_factors(105) # [3, 5, 7]
+prime_factors(200) # [2, 2, 2, 5, 5]
+
+-----------------------------------------------------------------
+'''
+# Your solution for 09-prime_factors here:
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 10a-create_phone_number
+
+Difficulty: Basic
+
+Prompt:
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+Example:
+create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // '(123) 456-7890'
+-----------------------------------------------------------------
+'''
+# Your solution for 10a-create_phone_number here:
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 10b-rgb
+
+Difficulty: Basic
+
+Prompt:
+The RGB function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+
+**Note**: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+
+Examples:
+rgb(255, 255, 255) # 'FFFFFF'
+rgb(255, 255, 300) # 'FFFFFF'
+rgb(0,0,0) # '000000'
+rgb(148, 0, 211) # '9400D3'
+-----------------------------------------------------------------
+'''
+# Your solution for 10b-rgb here:

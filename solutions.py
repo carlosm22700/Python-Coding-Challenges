@@ -345,3 +345,132 @@ def title_to_number(column_title):
         col_num += columns.get(column_title[i]) * col_pos
     
     return col_num
+
+
+'''
+-----------------------------------------------------------------
+Challenge: 09-prime_factors
+
+Difficulty: Intermediate
+
+Prompt:
+Write a function named prime_factors that accepts a whole number greater than one (1) as an argument and returns an list of that argument's prime factors.
+
+The prime factors of a whole number are the prime numbers that, when multiplied together, equals the whole number.
+
+If the argument provided is not greater than 1, or not a whole number, then primeFactors should return an empty list.
+
+Examples:
+prime_factors(2) # [2]
+prime_factors(3) # [3]
+prime_factors(4) # [2, 2]
+prime_factors(18) # [2, 3, 3]
+prime_factors(29) # [29]
+prime_factors(105) # [3, 5, 7]
+prime_factors(200) # [2, 2, 2, 5, 5]
+
+-----------------------------------------------------------------
+'''
+# Your solution for 09-prime_factors here:
+def is_prime(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+def prime_factors(num, primes=None):
+    # Common gotcha: Python’s default arguments are evaluated once when the function is defined
+    # A new list is created once when the function is defined, and the same list is used in each successive call.
+    # A way around this is the following lines
+    if primes is None:
+        primes = []
+
+    if is_prime(num):
+        primes.append(num)
+        return sorted(primes)
+    
+    for i in range(2, num):
+        is_divisible = num % i == 0
+        if is_prime(i) and is_divisible:
+            primes.append(i)
+            num = int(num / i)
+            return prime_factors(num, primes)
+
+'''
+-----------------------------------------------------------------
+Challenge: 10a-create_phone_number
+
+Difficulty: Basic
+
+Prompt:
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+Example:
+create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // '(123) 456-7890'
+-----------------------------------------------------------------
+'''
+# Your solution for 10a-create_phone_number here:
+import re
+def create_phone_number(nums):
+    if len(nums) != 10:
+        return 'Not a valid phone number'
+    
+    stringify_nums = ''
+    for num in nums:
+        stringify_nums += str(num)
+
+    # regex
+    return re.sub(r'(\d{3})(\d{3})(\d{4})', r'(\1) \2-\3', stringify_nums)
+
+'''
+-----------------------------------------------------------------
+Challenge: 10b-rgb
+
+Difficulty: Basic
+
+Prompt:
+The RGB function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+
+**Note**: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+
+Examples:
+rgb(255, 255, 255) # 'FFFFFF'
+rgb(255, 255, 300) # 'FFFFFF'
+rgb(0,0,0) # '000000'
+rgb(148, 0, 211) # '9400D3'
+-----------------------------------------------------------------
+'''
+# Your solution for 10b-rgb here:
+import math
+def rgb(r, g, b):
+    double_digits = {
+        10: 'A',
+        11: 'B',
+        12: 'C',
+        13: 'D',
+        14: 'E',
+        15: 'F'
+    }
+    hex_conversion = ''
+    arr = [r, g, b]
+
+    for num in arr:
+        if num % 1 != 0:
+            num = round(num)
+        if num > 255:
+            num = 255
+        elif num < 0:
+            num = 0
+
+        whole_number = math.floor(num / 16)
+        remainder = num % 16
+
+        if whole_number < 10:
+            hex_conversion += str(whole_number)
+        else:
+            hex_conversion += double_digits[whole_number]
+        if remainder < 10:
+            hex_conversion += str(remainder)
+        else:
+            hex_conversion += double_digits[remainder]
+    return hex_conversion

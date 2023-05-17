@@ -1,6 +1,6 @@
 import pytest
 import unittest
-import solutions as c
+import challenges as c
 
 # to run tests, execute `pytest` in the terminal
 
