@@ -39,7 +39,7 @@ For each iteration:
 
 Examples:
 fizzbuzz(5) # [1, 2, 'fizz', 4, 'buzz']
-fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 6, 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz']
+fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz']
 -----------------------------------------------------------------
 '''
 # Your solution for 01-fizzbuzz here:
