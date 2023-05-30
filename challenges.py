@@ -14,6 +14,9 @@ sayHello() # => Hello!
 -----------------------------------------------------------------*/
 '''
 # Your solution for 00-sayHello (example) here:
+from collections import Counter
+
+
 def sayHello():
     return 'Hello!'
 
@@ -45,6 +48,20 @@ fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz
 # Your solution for 01-fizzbuzz here:
 
 
+def fizz_buzz(max_num):
+    fb_list = []
+    for count in range(1, max_num+1):
+        if count % 3 == 0 and count % 5 == 0:
+            fb_list.append('fizzbuzz')
+        elif count % 3 == 0:
+            fb_list.append('fizz')
+        elif count % 5 == 0:
+            fb_list.append('buzz')
+        else:
+            fb_list.append(count)
+        return fb_list
+
+
 '''
 -----------------------------------------------------------------
 Challenge: 02-length_of_last_word
@@ -65,6 +82,14 @@ length_of_last_word(' Face    difficult situations    and conflict head     on  
 # Your solution for 02-length_of_last_word here:
 
 
+def length_of_last_word(s):
+    words = s.split()
+    if len(words) == 0:
+        return 0
+    else:
+        return len(words[-1])
+
+
 '''
 -----------------------------------------------------------------
 Challenge: 03-sum_of_maximums
@@ -82,6 +107,10 @@ sum_of_maximums([[1,2,3], [4,5], [6,7,8,9]])) # 17
 -----------------------------------------------------------------
 '''
 # Your solution for 03-sum_of_maximums:
+
+
+def sum_of_maximums(arr):
+    return sum(max(sub_arr) for sub_arr in arr)
 
 
 '''
@@ -104,6 +133,13 @@ majority_element([2,2,1,1,1,2,2]) # 2
 # Your solution for 04-majority_element:
 
 
+def majority_element(nums):
+    count = Counter(nums)
+    for num in nums:
+        if count(nums) > len(nums) // 2:
+            return num
+
+
 '''
 -----------------------------------------------------------------
 Challenge: 05-search_insert
@@ -121,6 +157,15 @@ search_insert([1, 3, 6], 7) # 3
 -----------------------------------------------------------------
 '''
 # Your solution for 05-search_insert here:
+
+
+def search_insert(nums, target):
+    if target in nums:
+        return nums.index(target)
+    else:
+        nums.append(target)
+        nums.sort()
+        return nums.index(target)
 
 
 '''
@@ -206,7 +251,6 @@ title_to_number('ZY') # 701
 -----------------------------------------------------------------
 '''
 # Your solution for 08-title_to_number here:
-
 
 
 '''
