@@ -47,19 +47,29 @@ fizzbuzz(15) # [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz
 '''
 # Your solution for 01-fizzbuzz here:
 
+# function takes in int called max_num and returns a list
+
+# iterates from 1 up to max num
+# - If the number is divisible by 3, append "fizz".
+# - If the number is divisible by 5, append "buzz".
+# - If the number is divisible by 3 and 5, append "fizzbuzz".
+
 
 def fizz_buzz(max_num):
+
+    count = 1
+
     fb_list = []
-    for count in range(1, max_num+1):
-        if count % 3 == 0 and count % 5 == 0:
-            fb_list.append('fizzbuzz')
-        elif count % 3 == 0:
-            fb_list.append('fizz')
-        elif count % 5 == 0:
-            fb_list.append('buzz')
+
+    for i in range(count, max_num):
+        if i % 3 == 0:
+            fb_list.append("fizz")
+        elif i % 5 == 0:
+            fb_list.append("buzz")
         else:
-            fb_list.append(count)
-        return fb_list
+            fb_list.append(i)
+
+    return fb_list
 
 
 '''
@@ -83,7 +93,7 @@ length_of_last_word(' Face    difficult situations    and conflict head     on  
 
 
 def length_of_last_word(s):
-    words = s.split()
+    words = s.strip().split()
     if len(words) == 0:
         return 0
     else:

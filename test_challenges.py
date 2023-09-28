@@ -2,6 +2,7 @@ import unittest
 import challenges as c
 
 # to run tests, execute `pytest` in the terminal
+
 ''' move this line below the challenge's test that you're working currently on (option + down)
 
 # Challenge: 01-fizz_buzz
@@ -153,4 +154,3 @@ class TestRGB(unittest.TestCase):
         assert c.rgb(148, 0, 211) == '9400D3'
         
 '''
-
